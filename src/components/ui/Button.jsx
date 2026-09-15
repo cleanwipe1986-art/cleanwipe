@@ -2,9 +2,9 @@ import { Link } from 'react-router-dom'
 
 const variants = {
   primary:
-    'bg-gradient-to-r from-orbit-violet to-orbit-cyan text-white shadow-lg shadow-orbit-violet/25 hover:shadow-orbit-violet/40 hover:-translate-y-0.5',
+    'bg-gradient-to-r from-brand-600 to-brand-400 text-white shadow-lg shadow-brand-600/25 hover:shadow-brand-600/40 hover:-translate-y-0.5',
   ghost:
-    'border border-white/15 text-space-200 hover:border-white/35 hover:text-white bg-white/[0.02]',
+    'border border-ink-900/15 text-ink-700 hover:border-brand-500/50 hover:text-brand-700 bg-white',
 }
 
 export default function Button({

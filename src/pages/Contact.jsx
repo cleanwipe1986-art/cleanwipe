@@ -2,16 +2,17 @@ import { useState } from 'react'
 import { Mail, MapPin, Phone, CheckCircle2 } from 'lucide-react'
 import Eyebrow from '../components/ui/Eyebrow'
 import Button from '../components/ui/Button'
+import { courses } from '../data/courses'
 
 const contactInfo = [
   { icon: Mail, label: 'hello@orbitmedia.io' },
   { icon: Phone, label: '+1 (555) 012-4820' },
-  { icon: MapPin, label: 'San Francisco · Remote-friendly' },
+  { icon: MapPin, label: 'San Francisco · Online & On-campus batches' },
 ]
 
-const budgets = ['Under $10k', '$10k – $50k', '$50k – $150k', '$150k+']
+const courseOptions = ['Not sure yet', ...courses.map((course) => course.title)]
 
-const initialForm = { name: '', email: '', company: '', budget: budgets[0], message: '' }
+const initialForm = { name: '', email: '', phone: '', course: courseOptions[0], message: '' }
 
 export default function Contact() {
   const [form, setForm] = useState(initialForm)
@@ -29,16 +30,16 @@ export default function Contact() {
 
   return (
     <section className="relative overflow-hidden bg-grid px-6 py-24 lg:px-8">
-      <div className="absolute inset-0 bg-gradient-to-b from-space-950 via-space-950/70 to-space-950" />
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-white/70 to-white" />
       <div className="relative mx-auto max-w-6xl">
         <div className="mx-auto max-w-2xl text-center">
-          <Eyebrow>Contact</Eyebrow>
-          <h1 className="font-display mt-6 text-4xl font-bold text-white sm:text-5xl">
-            Let's build <span className="text-gradient">something great</span>
+          <Eyebrow>Contact & Enroll</Eyebrow>
+          <h1 className="font-display mt-6 text-4xl font-bold text-ink-900 sm:text-5xl">
+            Let's find your <span className="text-gradient">right course</span>
           </h1>
-          <p className="mt-6 text-lg leading-relaxed text-space-400">
-            Tell us a bit about your project and one of our strategists will get back to you
-            within one business day.
+          <p className="mt-6 text-lg leading-relaxed text-ink-700/80">
+            Tell us a bit about yourself and one of our advisors will get back to you within one
+            business day.
           </p>
         </div>
 
@@ -47,18 +48,18 @@ export default function Contact() {
             <div className="space-y-6">
               {contactInfo.map(({ icon: Icon, label }) => (
                 <div key={label} className="flex items-center gap-4">
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/[0.02] text-orbit-cyan">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-ink-900/10 bg-white text-brand-600 shadow-sm">
                     <Icon size={18} />
                   </div>
-                  <span className="text-sm text-space-200">{label}</span>
+                  <span className="text-sm text-ink-700">{label}</span>
                 </div>
               ))}
             </div>
 
-            <div className="mt-10 rounded-2xl border border-white/10 bg-white/[0.02] p-6">
-              <p className="font-display text-sm font-semibold text-white">Office hours</p>
-              <p className="mt-2 text-sm text-space-400">Monday – Friday, 9am – 6pm PT</p>
-              <p className="mt-4 text-sm text-space-400">
+            <div className="mt-10 rounded-2xl border border-ink-900/10 bg-white p-6 shadow-sm">
+              <p className="font-display text-sm font-semibold text-ink-900">Office hours</p>
+              <p className="mt-2 text-sm text-ink-700/80">Monday – Saturday, 9am – 6pm</p>
+              <p className="mt-4 text-sm text-ink-700/80">
                 Prefer async? Email is monitored around the clock and we typically reply same day.
               </p>
             </div>
@@ -66,10 +67,10 @@ export default function Contact() {
 
           <div className="lg:col-span-3">
             {submitted ? (
-              <div className="flex h-full flex-col items-center justify-center rounded-2xl border border-white/10 bg-white/[0.02] px-8 py-16 text-center">
-                <CheckCircle2 size={40} className="text-orbit-cyan" />
-                <h2 className="font-display mt-4 text-2xl font-semibold text-white">Message sent</h2>
-                <p className="mt-2 max-w-sm text-sm text-space-400">
+              <div className="flex h-full flex-col items-center justify-center rounded-2xl border border-ink-900/10 bg-white px-8 py-16 text-center shadow-sm">
+                <CheckCircle2 size={40} className="text-brand-600" />
+                <h2 className="font-display mt-4 text-2xl font-semibold text-ink-900">Message sent</h2>
+                <p className="mt-2 max-w-sm text-sm text-ink-700/80">
                   Thanks, {form.name.split(' ')[0] || 'there'}! We've received your message and will
                   be in touch within one business day.
                 </p>
@@ -87,7 +88,7 @@ export default function Contact() {
             ) : (
               <form
                 onSubmit={handleSubmit}
-                className="space-y-5 rounded-2xl border border-white/10 bg-white/[0.02] p-8"
+                className="space-y-5 rounded-2xl border border-ink-900/10 bg-white p-8 shadow-sm"
               >
                 <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
                   <Field label="Full name">
@@ -108,47 +109,47 @@ export default function Contact() {
                       name="email"
                       value={form.email}
                       onChange={handleChange}
-                      placeholder="jane@company.com"
+                      placeholder="jane@example.com"
                       className={inputClasses}
                     />
                   </Field>
                 </div>
 
                 <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-                  <Field label="Company">
+                  <Field label="Phone number">
                     <input
-                      type="text"
-                      name="company"
-                      value={form.company}
+                      type="tel"
+                      name="phone"
+                      value={form.phone}
                       onChange={handleChange}
-                      placeholder="Company name"
+                      placeholder="+1 555 012 4820"
                       className={inputClasses}
                     />
                   </Field>
-                  <Field label="Estimated budget">
+                  <Field label="Course interest">
                     <select
-                      name="budget"
-                      value={form.budget}
+                      name="course"
+                      value={form.course}
                       onChange={handleChange}
                       className={inputClasses}
                     >
-                      {budgets.map((budget) => (
-                        <option key={budget} value={budget} className="bg-space-900">
-                          {budget}
+                      {courseOptions.map((course) => (
+                        <option key={course} value={course}>
+                          {course}
                         </option>
                       ))}
                     </select>
                   </Field>
                 </div>
 
-                <Field label="Project details">
+                <Field label="Message">
                   <textarea
                     required
                     name="message"
                     value={form.message}
                     onChange={handleChange}
                     rows={5}
-                    placeholder="Tell us about your project, timeline, and goals..."
+                    placeholder="Tell us about your goals, prior experience, and preferred batch timing..."
                     className={`${inputClasses} resize-none`}
                   />
                 </Field>
@@ -166,12 +167,12 @@ export default function Contact() {
 }
 
 const inputClasses =
-  'w-full rounded-xl border border-white/10 bg-space-950/60 px-4 py-3 text-sm text-white placeholder:text-space-400 outline-none transition-colors focus:border-orbit-violet/60'
+  'w-full rounded-xl border border-ink-900/10 bg-white px-4 py-3 text-sm text-ink-900 placeholder:text-ink-700/40 outline-none transition-colors focus:border-brand-500/60'
 
 function Field({ label, children }) {
   return (
     <label className="block">
-      <span className="mb-2 block text-xs font-medium uppercase tracking-wide text-space-400">{label}</span>
+      <span className="mb-2 block text-xs font-medium uppercase tracking-wide text-ink-700/60">{label}</span>
       {children}
     </label>
   )

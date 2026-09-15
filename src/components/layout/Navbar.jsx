@@ -6,8 +6,7 @@ import Button from '../ui/Button'
 
 const links = [
   { to: '/', label: 'Home' },
-  { to: '/services', label: 'Services' },
-  { to: '/work', label: 'Work' },
+  { to: '/courses', label: 'Courses' },
   { to: '/about', label: 'About' },
   { to: '/contact', label: 'Contact' },
 ]
@@ -25,8 +24,8 @@ export default function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-colors duration-300 ${
-        scrolled ? 'border-b border-white/10 bg-space-950/80 backdrop-blur-lg' : 'border-b border-transparent'
+      className={`sticky top-0 z-50 bg-white/90 backdrop-blur-lg transition-shadow duration-300 ${
+        scrolled ? 'shadow-sm shadow-ink-900/5' : ''
       }`}
       style={{ paddingTop: 'env(safe-area-inset-top, 0px)' }}
     >
@@ -41,7 +40,7 @@ export default function Navbar() {
               end={link.to === '/'}
               className={({ isActive }) =>
                 `text-sm font-medium transition-colors ${
-                  isActive ? 'text-white' : 'text-space-400 hover:text-white'
+                  isActive ? 'text-brand-600' : 'text-ink-700 hover:text-brand-600'
                 }`
               }
             >
@@ -52,13 +51,13 @@ export default function Navbar() {
 
         <div className="hidden md:block">
           <Button to="/contact" className="!px-5 !py-2.5 text-sm">
-            Start a Project
+            Enroll Now
           </Button>
         </div>
 
         <button
           type="button"
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-white md:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-full border border-ink-900/10 text-ink-900 md:hidden"
           onClick={() => setOpen((prev) => !prev)}
           aria-label="Toggle menu"
           aria-expanded={open}
@@ -68,7 +67,7 @@ export default function Navbar() {
       </nav>
 
       {open && (
-        <div className="border-t border-white/10 bg-space-950/95 px-6 pb-6 pt-4 md:hidden">
+        <div className="border-t border-ink-900/10 bg-white px-6 pb-6 pt-4 md:hidden">
           <div className="flex flex-col gap-4">
             {links.map((link) => (
               <NavLink
@@ -77,14 +76,14 @@ export default function Navbar() {
                 end={link.to === '/'}
                 onClick={() => setOpen(false)}
                 className={({ isActive }) =>
-                  `text-base font-medium ${isActive ? 'text-white' : 'text-space-400'}`
+                  `text-base font-medium ${isActive ? 'text-brand-600' : 'text-ink-700'}`
                 }
               >
                 {link.label}
               </NavLink>
             ))}
             <Button to="/contact" className="mt-2 w-full" onClick={() => setOpen(false)}>
-              Start a Project
+              Enroll Now
             </Button>
           </div>
         </div>

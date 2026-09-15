@@ -1,27 +1,27 @@
 export const team = [
-  { name: 'Sofia Marin', role: 'Founder & Creative Director', initials: 'SM' },
-  { name: 'Daniel Osei', role: 'Head of Engineering', initials: 'DO' },
-  { name: 'Hana Kobayashi', role: 'Lead Product Designer', initials: 'HK' },
-  { name: 'Lucas Ferreira', role: 'Cloud & DevOps Lead', initials: 'LF' },
-  { name: 'Amara Chukwu', role: 'Mobile Engineering Lead', initials: 'AC' },
-  { name: 'Ethan Cole', role: 'Director of Strategy', initials: 'EC' },
+  { name: 'Sofia Marin', role: 'Founder & Lead Trainer', initials: 'SM' },
+  { name: 'Daniel Osei', role: 'Web & App Development Trainer', initials: 'DO' },
+  { name: 'Hana Kobayashi', role: 'UI/UX & Graphic Design Trainer', initials: 'HK' },
+  { name: 'Lucas Ferreira', role: 'AI Automation Trainer', initials: 'LF' },
+  { name: 'Amara Chukwu', role: 'Digital Marketing Trainer', initials: 'AC' },
+  { name: 'Ethan Cole', role: 'Placement & Career Coach', initials: 'EC' },
 ]
 
 export const values = [
   {
-    title: 'Design is the strategy',
-    description: 'We don’t bolt design on at the end — every decision starts from how it feels to use.',
+    title: 'Learn by doing',
+    description: 'Every course is built around live projects and real briefs, not just slides and theory.',
   },
   {
-    title: 'Ship, measure, refine',
-    description: 'We favor small, fast releases backed by real data over big-bang launches.',
+    title: 'Industry-current curriculum',
+    description: 'Course content is updated as tools and platforms change, so you learn what employers use today.',
   },
   {
-    title: 'Senior people, no bench',
-    description: 'Every project is staffed by the same senior team you meet in the first call.',
+    title: 'Small batches, real attention',
+    description: 'Trainers know every student by name — no getting lost in a crowded classroom.',
   },
   {
-    title: 'Built to outlast us',
-    description: 'Clean architecture and documentation so your team can run with it independently.',
+    title: 'Support beyond the certificate',
+    description: 'Resume help, mock interviews, and placement assistance continue after your course ends.',
   },
 ]

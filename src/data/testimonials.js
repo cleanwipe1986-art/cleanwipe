@@ -1,20 +1,20 @@
 export const testimonials = [
   {
     quote:
-      'Orbit Media rebuilt our entire product experience in twelve weeks. Our activation rate nearly doubled the quarter after launch.',
-    name: 'Priya Nandakumar',
-    role: 'VP Product, Nova Financial',
+      'I joined the Digital Marketing course with zero experience. Within three months I was running real ad campaigns and landed a job as a marketing executive.',
+    name: 'Ananya Sharma',
+    role: 'Digital Marketing Course, Batch 2024',
   },
   {
     quote:
-      'The team moved like an in-house squad from day one — sharp design instincts, disciplined engineering, zero hand-holding required.',
-    name: 'Marcus Webb',
-    role: 'CTO, Pulse Health',
+      'The Website Development course was 100% practical — every class ended with something I actually built. My portfolio got me freelance clients before I even finished.',
+    name: 'Rohan Mehta',
+    role: 'Website Development Course, Batch 2024',
   },
   {
     quote:
-      'We came in for a redesign and left with a design system our whole company still uses. That is the Orbit difference.',
-    name: 'Elena Foster',
-    role: 'Founder, Kestrel Analytics',
+      'Trainers explained AI Automation tools in a way that actually made sense. I now run WhatsApp and email automations for two clients on my own.',
+    name: 'Sneha Iyer',
+    role: 'AI Automation & Tools Course, Batch 2025',
   },
 ]

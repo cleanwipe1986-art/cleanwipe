@@ -1,22 +1,22 @@
 export const process = [
   {
     step: '01',
-    title: 'Discover',
-    description: 'We dig into your users, business goals, and technical constraints before drawing anything.',
+    title: 'Enroll',
+    description: 'Pick a course, talk to an advisor, and join the next batch — online or in-person.',
   },
   {
     step: '02',
-    title: 'Design',
-    description: 'Wireframes to high-fidelity prototypes, tested with real users before a line of code ships.',
+    title: 'Learn',
+    description: 'Structured, trainer-led classes that break every topic down into practical steps.',
   },
   {
     step: '03',
-    title: 'Develop',
-    description: 'Agile sprints with weekly demos — you see progress continuously, not at the finish line.',
+    title: 'Practice',
+    description: 'Work on live projects and real briefs so your skills hold up outside the classroom.',
   },
   {
     step: '04',
-    title: 'Deploy & Grow',
-    description: 'We launch, monitor, and iterate — treating go-live as day one, not the final milestone.',
+    title: 'Get Certified',
+    description: 'Finish with a certificate, a portfolio, and placement support to land your first role.',
   },
 ]

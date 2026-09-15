@@ -4,8 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './index.css'
 import App from './App.jsx'
 import Home from './pages/Home.jsx'
-import Services from './pages/Services.jsx'
-import Work from './pages/Work.jsx'
+import Courses from './pages/Courses.jsx'
 import About from './pages/About.jsx'
 import Contact from './pages/Contact.jsx'
 import NotFound from './pages/NotFound.jsx'
@@ -16,8 +15,7 @@ createRoot(document.getElementById('root')).render(
       <Routes>
         <Route element={<App />}>
           <Route index element={<Home />} />
-          <Route path="services" element={<Services />} />
-          <Route path="work" element={<Work />} />
+          <Route path="courses" element={<Courses />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />

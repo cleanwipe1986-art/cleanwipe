@@ -1,0 +1,65 @@
+import { Search, TrendingUp, LayoutTemplate, Cpu } from 'lucide-react'
+
+export const courseCategories = [
+  {
+    icon: Search,
+    title: 'SEO Services',
+    items: [
+      'SEO Audit',
+      'On-Page SEO',
+      'Technical SEO',
+      'Keyword Research',
+      'Local SEO',
+      'Off-Page SEO',
+      'Link Building',
+      'E-commerce SEO',
+      'WordPress SEO',
+      'Blogger SEO',
+      'Google AdSense SEO',
+    ],
+  },
+  {
+    icon: TrendingUp,
+    title: 'Digital Marketing',
+    items: [
+      'Digital Marketing',
+      'Performance Marketing',
+      'Google Ads',
+      'Social Media Marketing',
+      'E-commerce Marketing',
+      'WhatsApp CRM Marketing',
+      'Email Marketing',
+      'Content Marketing',
+      'Lead Generation',
+    ],
+  },
+  {
+    icon: LayoutTemplate,
+    title: 'Development & Design',
+    items: [
+      'Custom Web Development',
+      'Web Design',
+      'WordPress',
+      'Shopify',
+      'E-commerce Development',
+      'UI/UX Design',
+      'Graphic Design',
+      'Landing Pages',
+      'Website Maintenance',
+    ],
+  },
+  {
+    icon: Cpu,
+    title: 'AI & Automation',
+    items: [
+      'AI Automation',
+      'AI Tools',
+      'AI Chatbots',
+      'CRM Automation',
+      'WhatsApp Automation',
+      'AI Lead Generation',
+      'Marketing Automation',
+      'Business Process Automation',
+    ],
+  },
+]
